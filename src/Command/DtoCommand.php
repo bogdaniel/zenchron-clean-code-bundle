@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Command;
+namespace Zenchron\CleanCodeBundle\Command;
 
-use Zenchron\CleanCodeBundle\Service\Contract\ClassGeneratorContract;
-use Zenchron\CleanCodeBundle\Service\GeneratorLoader;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Zenchron\CleanCodeBundle\Service\Contract\ClassGeneratorContract;
+use Zenchron\CleanCodeBundle\Service\GeneratorLoader;
 
 #[AsCommand(
     name: 'app:make-dto',
