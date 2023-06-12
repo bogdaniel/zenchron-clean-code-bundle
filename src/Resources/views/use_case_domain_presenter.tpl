@@ -1,7 +1,7 @@
 <?php
 namespace App\{{boundedContext}}\Domain\UseCases\{{useCaseName}}\Contract;
 
-use App\User\Domain\UseCases\{{useCaseName}}\{{useCaseName}}{{boundedContext}}Response;
+use App\{{boundedContext}}\Domain\UseCases\{{useCaseName}}\{{useCaseName}}{{boundedContext}}Response;
 
 interface {{useCaseName}}{{boundedContext}}PresenterContract
 {

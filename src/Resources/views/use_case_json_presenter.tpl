@@ -10,7 +10,7 @@ use App\{{boundedContext}}\Domain\UseCases\{{useCaseName}}\{{useCaseName}}{{boun
 
 final class {{useCaseName}}{{boundedContext}}JsonPresenter implements {{useCaseName}}{{boundedContext}}PresenterContract
 {
-    private RegisterUserJsonViewModel $viewModel;
+    private {{useCaseName}}{{boundedContext}}JsonViewModel $viewModel;
 
     public function present({{useCaseName}}{{boundedContext}}Response $response): void
     {

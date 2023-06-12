@@ -7,7 +7,7 @@ namespace App\{{boundedContext}}\Presentation\{{useCaseName}}\Http;
 use App\{{boundedContext}}\Domain\UseCases\{{useCaseName}}\Contract\{{useCaseName}}{{boundedContext}}PresenterContract;
 use App\{{boundedContext}}\Domain\UseCases\{{useCaseName}}\{{useCaseName}}{{boundedContext}}Response;
 
-final class RegisterUserHtmlPresenter implements {{useCaseName}}{{boundedContext}}PresenterContract
+final class {{useCaseName}}{{boundedContext}}HtmlPresenter implements {{useCaseName}}{{boundedContext}}PresenterContract
 {
     private {{useCaseName}}{{boundedContext}}HtmlViewModel $viewModel;
 
