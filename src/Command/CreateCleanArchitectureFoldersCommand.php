@@ -30,6 +30,7 @@ class CreateCleanArchitectureFoldersCommand extends Command
             'Symfony' => [
                 'Controller',
                 'Form',
+                'Collector',
                 'Repository',
                 'Contract',
                 'Entity',
