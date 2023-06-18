@@ -11,6 +11,12 @@ final class {{useCaseName}}{{boundedContext}}UseCase implements {{useCaseName}}{
 {
     public function execute({{useCaseName}}{{boundedContext}}Request $request, {{useCaseName}}{{boundedContext}}PresenterContract $presenter): void
     {
+        $response = new {{useCaseName}}{{boundedContext}}Response();
+
+        // TODO: Run validations
+        // TODO: Save Entity
         // TODO: Implement execute() method.
+
+        $presenter->present($registerResponse);
     }
 }
