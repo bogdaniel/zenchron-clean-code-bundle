@@ -35,7 +35,7 @@ class UseCaseInfrastructureHttpControllerClassGenerator extends ClassGenerator i
         $this->filename = $this->getFilename([$useCase, $boundedContext, $this->classNameSuffix]);
 
         // Clean and format directory and filename arguments
-        $directory = $this->formatPath('Framework\Controller'.$useCase.$this->fileLocation);
+        $directory = $this->formatPath($boundedContext.'/Framework/Controller/'.$useCase.$this->fileLocation);
 
         $this->filePath = $this->generateFilePath($directory);
         $this->generateFile($this->templateName, $variables);
