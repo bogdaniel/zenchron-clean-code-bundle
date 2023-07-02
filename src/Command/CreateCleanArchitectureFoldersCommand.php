@@ -28,7 +28,11 @@ class CreateCleanArchitectureFoldersCommand extends Command
         ],
         'Framework' => [
             'Symfony' => [
-                'Controller',
+                'Controller' => [
+                    'Console',
+                    'Http',
+                    'Api',
+                ],
                 'Form',
                 'Collector',
                 'Repository',
@@ -42,10 +46,10 @@ class CreateCleanArchitectureFoldersCommand extends Command
             ],
         ],
         'Presentation' => [
-            'Console',
-            'Http',
-            'Api',
-            'Ui',
+//            'Console',
+//            'Http',
+//            'Api',
+//            'Ui',
         ],
     ];
 
@@ -53,8 +57,7 @@ class CreateCleanArchitectureFoldersCommand extends Command
     {
         $this
             ->addArgument('boundedContext', InputArgument::REQUIRED, 'The bounded context name.')
-            ->addArgument('path', InputArgument::OPTIONAL, 'The path where to generate the folder structure.', 'src')
-        ;
+            ->addArgument('path', InputArgument::OPTIONAL, 'The path where to generate the folder structure.', 'src');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -67,6 +70,7 @@ class CreateCleanArchitectureFoldersCommand extends Command
         $boundedContextDir = sprintf('%s/%s', $path, $boundedContext);
         if ($filesystem->exists($boundedContextDir)) {
             $output->writeln(sprintf('Directory <comment>%s</comment> already exists. Aborting.', $boundedContextDir));
+
             return Command::FAILURE;
         }
 
@@ -84,8 +88,12 @@ class CreateCleanArchitectureFoldersCommand extends Command
         return Command::SUCCESS;
     }
 
-    private function createSubFolders(Filesystem $filesystem, OutputInterface $output, string $directory, array $subFolders): void
-    {
+    private function createSubFolders(
+        Filesystem $filesystem,
+        OutputInterface $output,
+        string $directory,
+        array $subFolders
+    ): void {
         foreach ($subFolders as $subFolder) {
             if (is_array($subFolder)) {
                 $this->createSubFolders($filesystem, $output, $directory, $subFolder);
