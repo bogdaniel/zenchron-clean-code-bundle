@@ -15,7 +15,7 @@ use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 
 #[Route('/', name: 'app')]
-final class {{useCaseName}}Controller extends AbstractController
+final class {{useCaseName}}{{boundedContext}}Controller extends AbstractController
 {
     private {{useCaseName}}{{boundedContext}}HtmlView $registerView;
     private {{useCaseName}}{{boundedContext}}UseCaseContract $useCase;
