@@ -28,5 +28,8 @@ final class {{useCaseName}}{{boundedContext}}HtmlView
         {{useCaseName}}{{boundedContext}}Request $request,
         {{useCaseName}}{{boundedContext}}HtmlViewModel $viewModel
     ): Response {
+        return new Response($this->twig->render('', [
+            'controller_name' => 'PageResolverController',
+        ]));
     }
 }
