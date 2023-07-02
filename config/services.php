@@ -8,6 +8,7 @@ use Zenchron\CleanCodeBundle\Command\CreateUseCaseCommand;
 use Zenchron\CleanCodeBundle\DependencyInjection\GeneratorCompilerPass;
 use Zenchron\CleanCodeBundle\Service\GeneratorLoader;
 use Zenchron\CleanCodeBundle\Service\UseCaseClassGenerator;
+use Zenchron\CleanCodeBundle\Service\UseCaseControllerClassGenerator;
 use Zenchron\CleanCodeBundle\Service\UseCaseDomainClassRepositoryGenerator;
 use Zenchron\CleanCodeBundle\Service\UseCaseDomainContractGenerator;
 use Zenchron\CleanCodeBundle\Service\UseCaseDomainEntity;
@@ -93,7 +94,11 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->tag('generator')
         ->tag('framework-generator')
         ->tag('class-generator');
-
+    
+    $services->set(UseCaseControllerClassGenerator::class)
+        ->tag('generator')
+        ->tag('framework-generator')
+        ->tag('class-generator');
 
     $services->set(GeneratorCompilerPass::class)
         ->tag('container.service_subscriber');

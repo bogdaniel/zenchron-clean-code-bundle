@@ -17,6 +17,6 @@ final class {{useCaseName}}{{boundedContext}}UseCase implements {{useCaseName}}{
         // TODO: Save Entity
         // TODO: Implement execute() method.
 
-        $presenter->present($registerResponse);
+        $presenter->present($response);
     }
 }
