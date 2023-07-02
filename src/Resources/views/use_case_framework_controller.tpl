@@ -23,7 +23,7 @@ final class {{useCaseName}}{{boundedContext}}Controller extends AbstractControll
 
     public function __construct(
         {{useCaseName}}{{boundedContext}}HtmlView $registerView,
-        {{useCaseName}}{{boundedContext}}seCaseContract $useCase,
+        {{useCaseName}}{{boundedContext}}UseCaseContract $useCase,
         {{useCaseName}}{{boundedContext}}HtmlPresenter $presenter
     ) {
         $this->registerView = $registerView;
