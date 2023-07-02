@@ -32,7 +32,7 @@ class UseCaseControllerClassGenerator extends ClassGenerator implements ClassGen
             'boundedContext' => $boundedContext,
         ];
 
-        $this->filename = $this->getFilename([$boundedContext, $this->classNameSuffix]);
+        $this->filename = $this->getFilename([$useCase, $boundedContext, $this->classNameSuffix]);
 
         // Clean and format directory and filename arguments
         $directory = $this->formatPath($boundedContext.'/'.$this->fileLocation);
