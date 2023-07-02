@@ -28,11 +28,7 @@ class CreateCleanArchitectureFoldersCommand extends Command
         ],
         'Framework' => [
             'Symfony' => [
-                'Controller' => [
-                    'Console',
-                    'Http',
-                    'Api',
-                ],
+                'Controller',
                 'Form',
                 'Collector',
                 'Repository',

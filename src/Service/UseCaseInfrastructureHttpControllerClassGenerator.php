@@ -9,9 +9,9 @@ use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 use Zenchron\CleanCodeBundle\Service\Contract\ClassGeneratorContract;
 
-class UseCaseControllerClassGenerator extends ClassGenerator implements ClassGeneratorContract
+class UseCaseInfrastructureHttpControllerClassGenerator extends ClassGenerator implements ClassGeneratorContract
 {
-    protected string $fileLocation = 'Framework\Controller\Http';
+    protected string $fileLocation = 'Http';
     private string $templateName = '@ZenchronCleanCode/use_case_framework_controller';
     private string $classNameSuffix = 'Controller';
 
@@ -35,7 +35,8 @@ class UseCaseControllerClassGenerator extends ClassGenerator implements ClassGen
         $this->filename = $this->getFilename([$useCase, $boundedContext, $this->classNameSuffix]);
 
         // Clean and format directory and filename arguments
-        $directory = $this->formatPath($boundedContext.'/'.$this->fileLocation);
+        $directory = $this->formatPath('Framework\Controller'.$useCase.$this->fileLocation);
+
         $this->filePath = $this->generateFilePath($directory);
         $this->generateFile($this->templateName, $variables);
     }
