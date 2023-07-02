@@ -13,7 +13,7 @@ class UseCaseInfrastructureFormTypeClassGenerator extends ClassGenerator impleme
 {
     protected string $fileLocation = '';
     private string $templateName = '@ZenchronCleanCode/use_case_framework_form_type';
-    private string $classNameSuffix = 'Controller';
+    private string $classNameSuffix = 'Type';
 
     public function __construct(Filesystem $filesystem, Environment $twig)
     {
