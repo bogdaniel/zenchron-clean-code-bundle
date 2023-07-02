@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\{{boundedContext}}\Framework\View\{{useCaseName}};
+namespace App\{{boundedContext}}\Framework\Controller\Http\{{useCaseName}};
 
 use App\{{boundedContext}}\Domain\UseCases\{{useCaseName}}\Contract\{{useCaseName}}{{boundedContext}}UseCaseContract;
 use App\{{boundedContext}}\Domain\UseCases\{{useCaseName}}\{{useCaseName}}{{boundedContext}}Request;
