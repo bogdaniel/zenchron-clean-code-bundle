@@ -94,7 +94,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->tag('generator')
         ->tag('framework-generator')
         ->tag('class-generator');
-    
+
     $services->set(UseCaseControllerClassGenerator::class)
         ->tag('generator')
         ->tag('framework-generator')

@@ -12,7 +12,7 @@ use Zenchron\CleanCodeBundle\Service\Contract\ClassGeneratorContract;
 class UseCaseControllerClassGenerator extends ClassGenerator implements ClassGeneratorContract
 {
     protected string $fileLocation = 'Framework\Controller\Http';
-    private string $templateName = '@ZenchronCleanCode/use_case_domain_repository';
+    private string $templateName = '@ZenchronCleanCode/use_case_framework_controller';
     private string $classNameSuffix = 'Controller';
 
     public function __construct(Filesystem $filesystem, Environment $twig)
