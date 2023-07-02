@@ -11,7 +11,7 @@ use Zenchron\CleanCodeBundle\Service\Contract\ClassGeneratorContract;
 
 class UseCaseInfrastructureHttpControllerClassGenerator extends ClassGenerator implements ClassGeneratorContract
 {
-    protected string $fileLocation = 'Http';
+    protected string $fileLocation = '/Http/';
     private string $templateName = '@ZenchronCleanCode/use_case_framework_controller';
     private string $classNameSuffix = 'Controller';
 
