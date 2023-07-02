@@ -9,10 +9,10 @@ use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 use Zenchron\CleanCodeBundle\Service\Contract\ClassGeneratorContract;
 
-class UseCaseInfrastructureHttpControllerClassGenerator extends ClassGenerator implements ClassGeneratorContract
+class UseCaseInfrastructureApiControllerClassGenerator extends ClassGenerator implements ClassGeneratorContract
 {
-    protected string $fileLocation = '/Http/';
-    private string $templateName = '@ZenchronCleanCode/use_case_framework_http_controller';
+    protected string $fileLocation = '/Api/';
+    private string $templateName = '@ZenchronCleanCode/use_case_framework_api_controller';
     private string $classNameSuffix = 'Controller';
 
     public function __construct(Filesystem $filesystem, Environment $twig)
