@@ -6,7 +6,7 @@ namespace App\{{boundedContext}}\Framework\Controller\{{useCaseName}}\Http;
 use App\{{boundedContext}}\Domain\UseCases\{{useCaseName}}\Contract\{{useCaseName}}{{boundedContext}}UseCaseContract;
 use App\{{boundedContext}}\Domain\UseCases\{{useCaseName}}\{{useCaseName}}{{boundedContext}}Request;
 use App\{{boundedContext}}\Framework\View\{{useCaseName}}\{{useCaseName}}{{boundedContext}}HtmlView;
-use App\{{boundedContext}}\Presentation\{{useCaseName}}\Http\NewFolderFileManagerHtmlPresenter;
+use App\{{boundedContext}}\Presentation\{{useCaseName}}\Http\{{useCaseName}}{{boundedContext}}HtmlPresenter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
